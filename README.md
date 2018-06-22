@@ -35,15 +35,16 @@ Improve end-to-end integration testing with maven. Process Executor Plugin allow
 * __processLogFile__: Optional. Specifying a log file will redirect the process output to the specified file. Recommended as this will avoid cluttering your build's log with the log of external proccesses.
 
 *NOTE:* As of 0.7, killing the maven process (using Ctrl+C or kill <pid> command) will stop all the processes started by the plugin.
+
 ## POM example:
-The latest version is 0.7.
+This version is `0.9-Genesys-SNAPSHOT`.
 
     <build>
         <plugins>
             <plugin>
                 <groupId>com.bazaarvoice.maven.plugins</groupId>
                 <artifactId>process-exec-maven-plugin</artifactId>
-                <version>0.7</version>
+                <version>0.9-Genesys-SNAPSHOT</version>
                 <executions>
                     <!--Start process 1, eg., a dropwizard app dependency-->
                     <execution>

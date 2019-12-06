@@ -68,6 +68,12 @@ public class ProcessHealthCondition {
 
             if (http instanceof HttpsURLConnection) {
                 ((HttpsURLConnection) http).setSSLSocketFactory(sslSocketFactory);
+                HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+                    @Override
+                    public boolean verify(String arg0, SSLSession arg1) {
+                        return true;
+                    }
+                });
             }
 
             http.setRequestMethod("GET");
